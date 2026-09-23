@@ -1,19 +1,15 @@
 {
     WURPLSVersion: "1.0",
     
-    Name: "ExampleMod",
+    Name: "NSMBU-Checkpoint",
     Type: "Standard",
     Version: "1.0.0",
-    Description: "This is the RedCore example mod!",
+    Description: "A more robust checkpoint flag for NSMBU",
     
     SourceDirs: [
         "src"
     ],
-    
-    IncludeDirs: [
-        "include"
-    ],
-    
+
     BuildOptions: [
         "-DNW_RELEASE"
     ],

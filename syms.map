@@ -1,3 +1,7 @@
 @addresses_from "00050000-10101D00" // US v1.3.0 (v64)
 
-// If your mod uses symbols that aren't in RedCore, you can add them here.
+// PlayerObject
+PlayerObject_setItemGetEffect = 0x0293A388;
+
+// EffectObj
+_ZN9EffectObj6followEPKN4sead7Vector3IfEEPK6Angle3S4_ = 0x022AB448;

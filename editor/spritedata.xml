@@ -1,6 +1,75 @@
 <?xml version="1.0"?>
 <sprites>
-	<sprite string_id="examplemod:demo" name="Demo Actor">
-        <!-- Settings go here -->
+	<sprite id="25" name="Checkpoint Flag" notes="When Mario collides with this flagpole, the game will set Mario's spawn point to it. The flag will turn into the color of the player (Mario = red, Luigi = green, YToad = yellow, BToad = blue) and will give the player who collides with it a mushroom. If a player dies in the same level, then the game will respawn all players at the flagpole. If someone decides to play another level or completes the level with the flagpole active, then the game will reset all memory in the flagpole and reset the spawn point location.">
+		<value nybble="7-8" title="Entrance ID" comment="The entrance when the player will be spawned if he dies after reaching the midway flag." id_type="entrance" category="behavior" />
+		<checkbox nybble="9" title="Can bounce on Bouncy Clouds" category="behavior" />
+		<list nybble="10" title="Appears" category="behavior">
+			<entry value="0">Always</entry>
+			<entry value="1">Only if midway flag is not yet touched</entry>
+			<entry value="2">Only if midway flag is already touched</entry>
+		</list>
+		<checkbox nybble="11" title="Unknown Checkbox 11" />
+		<checkbox nybble="11" title="Affected by gravity" mask="2" category="behavior" />
+		<checkbox nybble="12" title="Second checkpoint (Uses Time Limit 3)" comment="Set this if this is the second midway point in the level. If unchecked, Time Limit 2 will be used instead." category="behavior" />
+		<checkbox nybble="20" title="Spawn on ground" category="behavior" />
+
+		<!-- new stuff -->
+		<checkbox nybble="5" title="Flip Flag Model" category="behavior"/>
+
+		<list nybble="21" title="Powerup Behavior" category="behavior">
+			<entry value="0">Default</entry>
+			<entry value="1">Don't give player powerup</entry>
+			<entry value="2">Give the player powerup if applicable</entry>
+			<entry value="3">Give the player powerup and override existing one if applicable</entry>
+			<entry value="4">Give the player powerup always</entry>
+		</list>
+
+		<!-- nybble 22 -->
+		<list nybble="22" title="Powerup" category="behavior" requirednybble="21" requiredval="2-4">
+			<entry value="0">Small</entry>
+			<entry value="1">Mushroom</entry>
+			<entry value="2">Fire Flower</entry>
+			<entry value="3">Mini Mushroom</entry>
+			<entry value="4">Propeller Mushroom</entry>
+			<entry value="5">Penguin Suit</entry>
+			<entry value="6">Ice Flower</entry>
+			<entry value="7">Super Acorn</entry>
+			<entry value="8">P Acorn</entry>
+		</list>
+
+		<list nybble="23-24" title="Angle" category="behavior" requirednybble="11" requiredval="0">
+			<entry value="0">0°</entry>
+			<entry value="1">11.25°</entry>
+			<entry value="2">22.5°</entry>
+			<entry value="3">33.75°</entry>
+			<entry value="4">45°</entry>
+			<entry value="5">56.25°</entry>
+			<entry value="6">67.5°</entry>
+			<entry value="7">78.75°</entry>
+			<entry value="8">90°</entry>
+			<entry value="9">101.25°</entry>
+			<entry value="10">112.5°</entry>
+			<entry value="11">123.75°</entry>
+			<entry value="12">135°</entry>
+			<entry value="13">146.25°</entry>
+			<entry value="14">157.5°</entry>
+			<entry value="15">168.75°</entry>
+			<entry value="16">180°</entry>
+			<entry value="17">191.25°</entry>
+			<entry value="18">202.5°</entry>
+			<entry value="19">213.75°</entry>
+			<entry value="20">225°</entry>
+			<entry value="21">236.25°</entry>
+			<entry value="22">247.5°</entry>
+			<entry value="23">258.75°</entry>
+			<entry value="24">270°</entry>
+			<entry value="25">281.25°</entry>
+			<entry value="26">292.5°</entry>
+			<entry value="27">303.75°</entry>
+			<entry value="28">315°</entry>
+			<entry value="29">326.25°</entry>
+			<entry value="30">337.5°</entry>
+			<entry value="31">348.75°</entry>
+		</list>
 	</sprite>
 </sprites>
